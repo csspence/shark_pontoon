@@ -15,6 +15,16 @@ If you make it, return "Alive!", if not, return "Shark Bait!".
 
 */
 
-function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+const shark = (pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) => {
+  if(dolphin === true) {
+    sharkSpeed = sharkSpeed / 2;
+  }
+  let youFinal = youSpeed / pontoonDistance;
+  let sharkFinal = sharkDistance / sharkSpeed;
 
+  if(youFinal < sharkFinal) {
+    return 'Alive!'
+  } else {
+    return 'Shark Bait!'
+  }
 }
